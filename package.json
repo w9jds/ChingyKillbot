@@ -1,0 +1,31 @@
+{
+  "name": "killbot-integration",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack --verbose --colors",
+    "build-prod": "npm run build && docker build -t killbot-integration .",
+    "start": "node ./build/killbot.js"
+  },
+  "dependencies": {
+    "@types/hapi": "^17.0.0",
+    "babel-polyfill": "^6.26.0",
+    "firebase-admin": "^5.2.1",
+    "hapi": "^17.2.0",
+    "isomorphic-fetch": "^2.2.1",
+    "moment": "^2.18.1",
+    "tslib": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/isomorphic-fetch": "^0.0.34",
+    "@types/node": "^8.0.28",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.5.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-hot-middleware": "^2.19.1",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
