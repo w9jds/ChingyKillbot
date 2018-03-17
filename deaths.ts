@@ -263,7 +263,7 @@ export default class Deaths {
 
         let kill: Embed = {
             title: `${killingPilot} killed ${names[killInfo.killmail.victim.character_id].name} (${names[killInfo.killmail.victim.corporation_id].name})`,
-            color: attacker ? 8103679 : victim ? 16711680 : 6710886,
+            color: victim ? 16711680 : attacker ? 8103679 : 6710886,
             url: `https://zkillboard.com/kill/${killInfo.killID}`,
             timestamp: moment(killInfo.killmail.killmail_time).toISOString(),
             thumbnail: {
@@ -306,7 +306,7 @@ export default class Deaths {
 
         return {
             content: killInfo.zkb.totalValue >= 3000000000 ? 
-                `WOAH! Look at that kill <@${integration.child('channelId').val()}>` : '',
+                `WOAH! Look at that kill <#${integration.child('channelId').val()}>` : '',
             embeds: [kill]
         };
     }
