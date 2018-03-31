@@ -22,7 +22,7 @@ spec:
         run: killbot
     spec:
       containers:
-      - image: us.gcr.io/new-eden-storage-a5c23/killbot-integration:v1.0
+      - image: us.gcr.io/new-eden-storage-a5c23/killbot-integration:v1.7
         imagePullPolicy: IfNotPresent
         name: killbot
         ports:

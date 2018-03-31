@@ -306,7 +306,7 @@ export default class Deaths {
 
         return {
             content: killInfo.zkb.totalValue >= 3000000000 ? 
-                `WOAH! Look at that kill <#${integration.child('channelId').val()}>` : '',
+                `WOAH! Look at that kill @everyone` : '',
             embeds: [kill]
         };
     }
